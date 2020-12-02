@@ -2,5 +2,4 @@ who | wc -l
 cat > usuarios.sh
 who | wc -l
 ^D
-chmod +x usuarios.sh
 ./usuarios.sh
