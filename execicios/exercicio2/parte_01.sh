@@ -1,3 +1,5 @@
+# Correção Final: 0,5
+
 # Qual o papel deste cat?
 cat > parte_01.sh
 # O resto parece correto.
