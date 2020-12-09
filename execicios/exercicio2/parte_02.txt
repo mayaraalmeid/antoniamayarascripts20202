@@ -1,4 +1,6 @@
+# Aqui você teria que ter colocado (revista)|(revistas), sendo que ainda não é a maneira mais simples, que seria 'revistas?'
 'revista|revistas'
+# Não pedi comando grep, mas expressão regular.
 'letras' -i
-
+# Falta um ponto.
 '[0-9]{3}\.[0-9]{3}\.[0-9]{3}\'
