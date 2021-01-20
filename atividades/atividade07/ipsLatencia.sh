@@ -6,5 +6,5 @@ for i in $(cat ${ips})
 do
      ping -c 5 "$i" >> resultIp.txt
      echo "$i $(grep avg resultIp.txt | cut -f5 -d'/')ms"
+     rm resultIp.txt
 done
-rm resultIp.txt
