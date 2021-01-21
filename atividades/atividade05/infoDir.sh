@@ -1,4 +1,5 @@
 #!/bin/bash
+# Correção: 1,0
 diretorio=${1}
 
 if test -d ${diretorio}
