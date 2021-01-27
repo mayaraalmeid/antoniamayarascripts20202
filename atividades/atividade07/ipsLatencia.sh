@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# Correção: 0,5
 ips=${1}
 echo "Relatório de Latência."
 for i in $(cat ${ips})

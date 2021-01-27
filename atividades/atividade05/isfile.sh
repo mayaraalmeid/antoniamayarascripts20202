@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# Correção: 1,0
 tipo=${1}
 
 if test -f ${tipo}
