@@ -1,4 +1,5 @@
 #!/bin/bash
+# Correção: 0,5
 opt=${1}
 cor=${2}
 lc=${3}
