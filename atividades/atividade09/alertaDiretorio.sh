@@ -1,4 +1,5 @@
 #!/bin/bash
+# Correção: 1,5. Conta e percebe o evento de remoção/adição, mas não lista os arquivos.
 
 temp=${1}
 dir=${2}
