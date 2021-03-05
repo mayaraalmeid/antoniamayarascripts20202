@@ -1,4 +1,5 @@
 #!/bin/bash
+# Não OK. Não consigo adicionar. 0,5
 
 function adicionar() {
         echo "$host;$ip" >> host.db
@@ -22,10 +23,12 @@ do
         if [ "$OPTVAR" = "l" ] 
         then
                 listar
+	# este teste -a %OPTARG está impossibilitando seu script de funcionar. Você deveria
+        # ter usado o teste para verificiar de $OPTARG era não nula e aí compor com -a.	
         elif [ "$OPTVAR" = "d" -a $OPTARG ] 
  	then
                 remover $OPTARG
-       elif [ "$OPTVAR" = "a" -a $OPTARG ]
+        elif [ "$OPTVAR" = "a" -a $OPTARG ]
 	then
                 hostname=$OPTARG
         elif [ "$OPTVAR" = "i" -a $OPTARG ]
