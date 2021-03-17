@@ -18,7 +18,7 @@ STATUS=$(aws ec2 describe-instances --instance-id $INSTANCIA --query "Reservatio
      if [ $STATUS = "running" ]
      then
          echo 'Instancia em estado' '"'$STATUS"' 
-         iIP=$(aws ec2 describe-instances --instance-id $iINSTANCIA --query "Reservations[0].Instances[].PublicIpAddress" --output text)
+         iIP=$(aws ec2 describe-instances --instance-id $INSTANCIA --query "Reservations[0].Instances[].PublicIpAddress" --output text)
          echo "Acesse: http://"$IP"/"
          break
      else
@@ -58,7 +58,6 @@ printf " \n" >> /usr/local/bin/texto.txt
  printf "<html>" > /var/www/html/index.html
  printf "<head>" >> /var/www/html/index.html
  printf '<meta charset="utf-8">' >> /var/www/html/index.html
- printf "<title>""Estado da Maquina""</title>" >> /var/www/html/index.html
  printf "</head>" >> /var/www/html/index.html
  printf "<body>" >> /var/www/html/index.html
  cat /usr/local/bin/texto.txt >> /var/www/html/index.html
