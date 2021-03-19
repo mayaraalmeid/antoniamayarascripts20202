@@ -1,5 +1,9 @@
 #!/bin/bash
- 
+# Correção: 0,1. 
+# Os dois scripts unidos um único arquivo não tem como funcionar. Ou você está sem compreender o funcionamento 
+# básico da nuvem e não me procurou para tirar dúvidas ou simplesmente está interessada apenas na presença. Como
+# pelo menos a primeira parte parece fazer algum sentido, darei a presença, mas a nota será mínima mesmo.
+
  IMAGEM=”ami-042e8287309f5df032” 
  GRUPO=$(aws ec2 create-security-group --group-name "scripts” --description "grupo de scripts"  --output text)
  SUBREDE$(aws ec2 describe-subnets --query "Subnets[0].SubnetId" --output text)
