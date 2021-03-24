@@ -27,9 +27,6 @@ else
 fi
 done
 
-
-
-
 INSTANCIA2=$(aws ec2 run-instances --image-id $IMAGEM--instance-type "t2.micro" --key-name $nomedachave --security-group-ids $GRUPO --subnet $SUBREDE --user-data file://test2.sh --query "Instances[0].InstanceId" --output text)
 
 while [ true ]
