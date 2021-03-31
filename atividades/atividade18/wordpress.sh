@@ -33,7 +33,11 @@ apt-get install -y mysql-server
 sed -ri 's\*bind-address.*=127.0.0.1/bind-address = 0.0.0.0/0' /etc/mysql/mysql.conf.d/mysqld.cnf
 
 systemctl restart mysql.service
-
+mysql<<BD
+CREATE DATABASE scripts;
+CREATE USER '$usuario'@'%' IDENTIFIED BY '$senha';
+BD
+EOF
     
 INSTANCIA2=$(aws ec2 run-instances --image-id $IMAGEM--instance-type "t2.micro" --key-name $nomedachave --security-group-ids $GRUPO --subnet $SUBREDE --user-data file://test2.sh --query "Instances[0].InstanceId" --output text)
 
