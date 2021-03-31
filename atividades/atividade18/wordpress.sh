@@ -4,7 +4,7 @@ IMAGEM=”ami-042e8287309f5df032”
 GRUPO=$(aws ec2 create-security-group --group-name "scripts” --description "grupo de scripts" --output text)
 SUBREDE$(aws ec2 describe-subnets --query "Subnets[0].SubnetId" --output text)
 nomedahave=${3}
-iprede=$(Wget -qO- https://ipecho.net/plain) 
+iprede=$(wget -qO- https://ipecho.net/plain) 
 
 aws ec2 authorize-security-group-ingress --group-id $grupoSecurity --protocol tcp --port 22 --cidr 1$iprede/32
 aws ec2 authorize-security-group-ingress --group-id $grupoSecurity --protocol tcp --port 80 --cidr 0.0.0.0/0
