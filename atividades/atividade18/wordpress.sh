@@ -1,3 +1,4 @@
+# Correção: 0,0. Não funciona, há problemas de codificação de caracteres. Você pelo menos chegou a executar este script?
 usuario=${1}
 senha=${2}
 IMAGEM=”ami-042e8287309f5df032”
