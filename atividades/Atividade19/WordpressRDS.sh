@@ -5,8 +5,9 @@ IMAGEM=”ami-042e8287309f5df032”
 GRUPO=$(aws ec2 create-security-group --group-name "scripts” --description "grupo de scripts" --output text)
 SUBREDE$(aws ec2 describe-subnets --query "Subnets[0].SubnetId" --output text)
 nomedahave=${3}
+iprede=$(wget -qO- https://ipecho.net/plain) 
 
-aws ec2 authorize-security-group-ingress --group-id $grupoSecurity --protocol tcp --port 22 --cidr 170.78.4.217/32
+aws ec2 authorize-security-group-ingress --group-id $grupoSecurity --protocol tcp --port 22 --cidr $iprede/32
 aws ec2 authorize-security-group-ingress --group-id $grupoSecurity --protocol tcp --port 80 --cidr 0.0.0.0/0
 aws ec2 authorize-security-group-ingress --group-id $grupoSecurity --protocol tcp --port 3360 --source-group $GRUPO
 INSTANCIA=$(aws ec2 run-instances --image-id $iIMAGEM--instance-type "t2.micro" --key-name $nomedachave --security-group-ids $GRUPO --subnet $SUBREDE --user-data file://test.sh --query "Instances[0].InstanceId" --output text)
