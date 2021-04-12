@@ -1,4 +1,6 @@
 #!/bin/bash
+# Correção: 0,0. Novamente, problemas de codificação. Acredito que você simplesmente copiou a atividade passada e fez uma 
+# mudança na mensagem impressa, visto que não usa o RDS. Não valerá presença. 
 usuario=${1}
 senha=${2}
 IMAGEM=”ami-042e8287309f5df032”
